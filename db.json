@@ -1,0 +1,28 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "firstname": "John",
+      "lastname": "Doe",
+      "group": "React N45"
+    },
+    {
+        "id":2,
+        "firstname": "Tom",
+        "lastname": "Smith",
+        "group": "React N34"
+    },
+    {
+      "id": 3,
+      "firstname": "John",
+      "lastname": "Smith",
+      "group": "React N45"
+    },
+    {
+        "id":4,
+        "firstname": "Tom",
+        "lastname": "Doe",
+        "group": "React N34"
+    }
+  ]
+}
