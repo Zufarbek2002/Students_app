@@ -1,28 +1,40 @@
 {
   "students": [
     {
-      "id": 1,
+      "id": "1",
       "firstname": "John",
       "lastname": "Doe",
       "group": "React N45"
     },
     {
-        "id":2,
-        "firstname": "Tom",
-        "lastname": "Smith",
-        "group": "React N34"
+      "id": "2",
+      "firstname": "Tom",
+      "lastname": "Smith",
+      "group": "React N34"
     },
     {
-      "id": 3,
+      "id": "3",
       "firstname": "John",
       "lastname": "Smith",
       "group": "React N45"
     },
     {
-        "id":4,
-        "firstname": "Tom",
-        "lastname": "Doe",
-        "group": "React N34"
+      "id": "4",
+      "firstname": "John",
+      "lastname": "White",
+      "group": "React N34"
+    },
+    {
+      "id": "ce0a",
+      "firstname": "Tom",
+      "lastname": "White",
+      "group": "React N35"
+    },
+    {
+      "id": "fc6b",
+      "firstname": "Tom",
+      "lastname": "Doe",
+      "group": "React N45"
     }
   ]
 }
