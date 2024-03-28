@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Button, Modal } from "react-bootstrap";
+import { CancelBtn, EditBtn } from "./ButtonStyle";
 
 const ModalComp = ({addModal, addCloseModal, addStudent}) => {
 
@@ -80,12 +81,12 @@ const ModalComp = ({addModal, addCloseModal, addStudent}) => {
           </form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={addCloseModal}>
+          <CancelBtn onClick={addCloseModal}>
             Close
-          </Button>
-          <Button variant="primary" onClick={handleAdd}>
+          </CancelBtn>
+          <EditBtn onClick={handleAdd}>
             Add
-          </Button>
+          </EditBtn>
         </Modal.Footer>
       </Modal>
     </div>

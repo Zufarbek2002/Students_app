@@ -1,6 +1,7 @@
 import { useContext, useState } from "react";
 import { Button, Modal } from "react-bootstrap";
 import UserContext from "../context/UserContext";
+import { CancelBtn, EditBtn } from "./ButtonStyle";
 
 const EditModalComp = ({ editModal, editCloseModal, addStudent }) => {
   const { studentData } = useContext(UserContext);
@@ -82,12 +83,12 @@ const EditModalComp = ({ editModal, editCloseModal, addStudent }) => {
           </form>
         </Modal.Body>
         <Modal.Footer>
-          <Button variant="secondary" onClick={editCloseModal}>
+          <CancelBtn onClick={editCloseModal}>
             Close
-          </Button>
-          <Button variant="primary" onClick={handleAdd}>
+          </CancelBtn>
+          <EditBtn onClick={handleAdd}>
             Edit
-          </Button>
+          </EditBtn>
         </Modal.Footer>
       </Modal>
     </div>

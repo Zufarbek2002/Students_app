@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { ButtonGroup } from "react-bootstrap";
 import UserContext from "../context/UserContext";
+import ButtonStyle from "./ButtonStyle";
 
 const SearchComp = ({addOpenModal}) => {
   const { data, setFiltered } = useContext(UserContext);
@@ -41,7 +42,7 @@ const SearchComp = ({addOpenModal}) => {
           <option value="React N35">React N35</option>
           <option value="React N45">React N45</option>
         </select>
-        <button className="btn btn-outline-success w-auto" onClick={addOpenModal}>Add</button>
+        <ButtonStyle onClick={addOpenModal}>Add</ButtonStyle>
       </ButtonGroup>
     </div>
   );

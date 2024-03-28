@@ -2,6 +2,7 @@ import axios from "axios";
 import { useContext } from "react";
 import { Table } from "react-bootstrap";
 import UserContext from "../context/UserContext";
+import { DeleteBtn, EditBtn } from "./ButtonStyle";
 
 const StudentsList = ({handleEdit}) => {
   const {filtered, setFiltered} = useContext(UserContext)
@@ -32,13 +33,12 @@ const StudentsList = ({handleEdit}) => {
               <td>{student.lastname}</td>
               <td>{student.group}</td>
               <td className="d-flex gap-2 justify-content-md-end">
-                <button className="btn btn-primary" onClick={() => handleEdit(student.id)}>Edit</button>
-                <button
-                  className="btn btn-danger"
+                <EditBtn onClick={() => handleEdit(student.id)}>Edit</EditBtn>
+                <DeleteBtn
                   onClick={() => handleDelete(student.id)}
                 >
                   Delete
-                </button>
+                </DeleteBtn>
               </td>
             </tr>
           ))}

@@ -38,7 +38,7 @@ const App = () => {
     setEditModal(false);
   };
   const addStudent = (student) => {
-    const newContact = [student, ...data];
+    const newContact = [...data, student];
     setFiltered(newContact);
     axios.post("http://localhost:3000/students", student)
   };
