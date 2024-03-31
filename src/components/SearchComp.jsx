@@ -7,7 +7,7 @@ const SearchComp = ({ addOpenModal }) => {
   const { data, setFiltered } = useContext(UserContext);
 
   const handleSearch = (e) => {
-    const text = e.target.value.toLowerCase();
+    const text = e.target.value.toLowerCase().trim();
     setFiltered(
       data.filter(
         (e) =>

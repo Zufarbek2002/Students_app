@@ -43,7 +43,9 @@ const Home = () => {
     setEditModal(false);
   };
   const addStudent = (student) => {
-    axios.post("http://localhost:3000/students", student);
+    if (student.firstname.length>=2 && student.lastname.length>=2 && student.group !== "") {
+      axios.post("http://localhost:3000/students", student);
+    }
   };
   const editStudent = (student) => {
     axios.put(`http://localhost:3000/students/${id}`, student);

@@ -13,7 +13,7 @@ const ModalComp = ({addModal, addCloseModal, addStudent}) => {
   const handleChange = (e) => {
     setStudent({
       ...student,
-      [e.target.id]: e.target.value,
+      [e.target.id]: e.target.value.trim(),
     });
   };
 
@@ -46,6 +46,7 @@ const ModalComp = ({addModal, addCloseModal, addStudent}) => {
                 className="form-control"
                 value={student.firstname}
                 onChange={handleChange}
+                required
               />
             </div>
 
@@ -59,6 +60,7 @@ const ModalComp = ({addModal, addCloseModal, addStudent}) => {
                 className="form-control"
                 value={student.lastname}
                 onChange={handleChange}
+                required
               />
             </div>
 
@@ -71,6 +73,7 @@ const ModalComp = ({addModal, addCloseModal, addStudent}) => {
                 className="form-select"
                 value={student.gender}
                 onChange={handleChange}
+                required
               >
                 <option value="All">All</option>
                 <option value="React N34">React N34</option>
