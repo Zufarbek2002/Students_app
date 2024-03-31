@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import { CancelBtn, EditBtn } from "./ButtonStyle";
 
 const ModalComp = ({addModal, addCloseModal, addStudent}) => {

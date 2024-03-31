@@ -1,15 +1,15 @@
 import { useContext, useState } from "react";
-import { Button, Modal } from "react-bootstrap";
+import { Modal } from "react-bootstrap";
 import UserContext from "../context/UserContext";
 import { CancelBtn, EditBtn } from "./ButtonStyle";
 
-const EditModalComp = ({ editModal, editCloseModal, addStudent }) => {
+const EditModalComp = ({ editModal, editCloseModal, editStudent }) => {
   const { studentData } = useContext(UserContext);
 
   const [student, setStudent] = useState({
-    firstname: `${studentData.firstname}`,
-    lastname: `${studentData.lastname}`,
-    group: `${studentData.group}`,
+    firstname: studentData.firstname,
+    lastname: studentData.lastname,
+    group: studentData.group,
   });
 
   const handleChange = (e) => {
@@ -22,7 +22,7 @@ const EditModalComp = ({ editModal, editCloseModal, addStudent }) => {
   const handleAdd = (e) => {
     e.preventDefault();
     editCloseModal();
-    addStudent(student);
+    editStudent(student);
     setStudent({
       firstname: "",
       lastname: "",
@@ -71,7 +71,7 @@ const EditModalComp = ({ editModal, editCloseModal, addStudent }) => {
               <select
                 id="group"
                 className="form-select"
-                value={student.gender}
+                value={student.group}
                 onChange={handleChange}
               >
                 <option value="All">All</option>

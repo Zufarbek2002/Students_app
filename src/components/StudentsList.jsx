@@ -4,8 +4,8 @@ import { Table } from "react-bootstrap";
 import UserContext from "../context/UserContext";
 import { DeleteBtn, EditBtn } from "./ButtonStyle";
 
-const StudentsList = ({handleEdit}) => {
-  const {filtered, setFiltered} = useContext(UserContext)
+const StudentsList = ({ handleEdit }) => {
+  const { filtered, setFiltered } = useContext(UserContext);
   const handleDelete = async (id) => {
     if (confirm("Are you sure delete")) {
       setFiltered(filtered.filter((student) => student.id !== id));
@@ -34,9 +34,7 @@ const StudentsList = ({handleEdit}) => {
               <td>{student.group}</td>
               <td className="d-flex gap-2 justify-content-md-end">
                 <EditBtn onClick={() => handleEdit(student.id)}>Edit</EditBtn>
-                <DeleteBtn
-                  onClick={() => handleDelete(student.id)}
-                >
+                <DeleteBtn onClick={() => handleDelete(student.id)}>
                   Delete
                 </DeleteBtn>
               </td>

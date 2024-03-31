@@ -3,7 +3,7 @@ import { ButtonGroup } from "react-bootstrap";
 import UserContext from "../context/UserContext";
 import ButtonStyle from "./ButtonStyle";
 
-const SearchComp = ({addOpenModal}) => {
+const SearchComp = ({ addOpenModal }) => {
   const { data, setFiltered } = useContext(UserContext);
 
   const handleSearch = (e) => {
@@ -36,7 +36,12 @@ const SearchComp = ({addOpenModal}) => {
           placeholder="Searching"
           onChange={handleSearch}
         />
-        <select name="group" id="group" className="form-select w-auto" onChange={handleFilter}>
+        <select
+          name="group"
+          id="group"
+          className="form-select w-auto"
+          onChange={handleFilter}
+        >
           <option value="All">All</option>
           <option value="React N34">React N34</option>
           <option value="React N35">React N35</option>

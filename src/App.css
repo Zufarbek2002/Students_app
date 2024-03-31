@@ -1,0 +1,6 @@
+a, span{
+    text-decoration: none !important;
+}
+a.active span{
+    color: black;
+}
